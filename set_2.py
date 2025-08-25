@@ -41,7 +41,6 @@ def shift_letter(letter, shift):
     shifted_index = (index + shift) % 26
     return str(alphabet[shifted_index])
 
-
 def caesar_cipher(message, shift):
     '''Caesar Cipher.
 
@@ -74,7 +73,6 @@ def caesar_cipher(message, shift):
     
     return str(result)
         
-
 def shift_by_letter(letter, letter_shift):
     '''Shift By Letter.
 
@@ -113,7 +111,6 @@ def shift_by_letter(letter, letter_shift):
     shifted_index = (letter_index + shift_index) % 26
 
     return alphabet[shifted_index]
-
 
 def vigenere_cipher(message, key):
     '''Vigenere Cipher.
@@ -161,7 +158,6 @@ def vigenere_cipher(message, key):
         key_index += 1  
 
     return "".join(result)
-   
 
 def scytale_cipher(message, shift):
     '''Scytale Cipher.
@@ -226,7 +222,6 @@ def scytale_cipher(message, shift):
         encoded.append(message[raw_index])
 
     return "".join(encoded)
-
 
 def scytale_decipher(message, shift):
     '''Scytale De-cipher.
