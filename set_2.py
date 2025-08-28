@@ -214,7 +214,6 @@ def scytale_cipher(message, shift):
     if remainder:
         message += "_" * (shift - remainder)
 
-    # 2) Encode using the specified indexing rule
     rows = len(message) // shift
     encoded = []
     for i in range(len(message)):
