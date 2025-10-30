@@ -1,0 +1,16 @@
+<h1>CafeGo</h1>
+<p>Transaction History for {{ .User.Username }}</p>
+<a href="/">Home</a>
+
+{{ if .Transactions }}
+  {{ range $t := .Transactions }}
+    <h3>Transaction #{{ $t.Id }} ({{ $t.CreatedAt }})</h3>
+    <ul>
+      {{ range $line := $t.Lines }}
+        <li>{{ $line.Quantity }} × {{ $line.ProductName }}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+{{ else }}
+  <p>No transactions yet.</p>
+{{ end }}

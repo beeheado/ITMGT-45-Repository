@@ -1,0 +1,21 @@
+<h1>CafeGo</h1>
+
+{{ if .Username }}
+  <p>Welcome, {{ .Username }}!</p>
+  <a href="/cart/">View my cart</a> | 
+   <a href="/transactions/">View Transaction History</a> |
+  <a href="/login">Logout</a>
+{{ else }}
+  <a href="/login">Login</a>
+{{ end }}
+
+<hr>
+
+<ul>
+  {{ range $p := .Products }}
+    <li>
+      <a href="/product/{{ $p.Id }}">{{ $p.Name }}</a> - PHP {{ $p.Price }}
+    </li>
+  {{ end }}
+</ul>
+

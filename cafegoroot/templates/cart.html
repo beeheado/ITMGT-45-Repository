@@ -1,0 +1,10 @@
+<h1>CafeGo</h1>
+<h2>Your Cart</h2>
+<ul>
+  {{ range .CartItems }}
+    <li>{{ .Quantity }} × {{ .ProductName }}</li>
+  {{ end }}
+</ul>
+<form action="/cart/" method="post">
+  <button type="submit">Checkout</button>
+</form>
